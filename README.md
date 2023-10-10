@@ -1,11 +1,16 @@
 # tiddlywiki-prevent-prevent-leave-user-script
+
 Prevent annoying "This website prevent you leave" dialog in tiddlywiki based websites.
 
-!!! Feature
+[openuserjs](https://openuserjs.org/scripts/linonetwo/Tiddlywiki_Prevent_Prevent_Leave)
+
+[中文 Readme](./Readme_zh.md)
+
+### Feature
 
 This plugin is designed to prevent the "Save before closing" dialog box from popping up after deploying the wiki online.
 
-!!! Motivation
+### Motivation
 
 The [[$:/plugins/felixhayashi/tiddlymap/misc/defaultViewHolder]] from TiddlyMap and the [[$:/StoryList]] from the system always change automatically:
 
@@ -27,4 +32,4 @@ I found out that onbeforeunload was the cause, [[I went to the repository and fo
 
 So I ended up following the [[Adding Babel Polyfill to TiddlyWiki|https://tiddlywiki.com/dev/#Adding%20Babel%20Polyfill%20to%20TiddlyWiki]] tutorial and added a startup script to clean up the unloadTask that was causing the popup on startup, after the above code, and the world was finally clear.
 
-I ended up wrapping it into this [[prevent-edit|$:/plugins/linonetwo/prevent-edit]] plugin.
+I ended up wrapping it into this [[prevent-edit|$:/plugins/linonetwo/prevent-edit]] plugin. (And now it is a user script)
